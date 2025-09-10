@@ -78,8 +78,17 @@ project(workspaceName)
         links { "winmm", "gdi32", "opengl32" }
         libdirs {"../bin/%{cfg.buildcfg}"}
 
-    filter{}
+    filter {}
+    
+    filter "configurations:Debug"
+        postbuildcommands { 
+            "{COPY} %[../lib/SDL3.lib] %[../bin/%{cfg.buildcfg}/]",
+            "{COPY} %[../lib/SDL3.pdb] %[../bin/%{cfg.buildcfg}/]",
+        }
+
+    filter {}
 
     postbuildcommands {
-        "{COPYDIR} %[../assets] %[../bin/%{cfg.buildcfg}/assets]"
+        "{COPYDIR} %[../assets] %[../bin/%{cfg.buildcfg}/assets]",
+        "{COPY} %[../lib/SDL3.dll] %[../bin/%{cfg.buildcfg}/]"
     }
