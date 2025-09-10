@@ -66,6 +66,8 @@ project(workspaceName)
     includedirs { "../src" }
     includedirs { "../include" }
 
+    links { "../lib/SDL3" }
+
     cppdialect "C++17"
     
     filter { "action:vs*" }
