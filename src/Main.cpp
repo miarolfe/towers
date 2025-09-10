@@ -1,6 +1,15 @@
-#include <cstdio>
+// Copyright Mia Rolfe. All rights reserved.
+#include <Game.h>
 
 int main()
 {
-    printf("Hello, World!\n");
+    Game* game = new Game;
+    game->Init();
+
+    while (game->IsRunning())
+    {
+        game->Frame();
+    }
+
+    game->Shutdown();
 }
