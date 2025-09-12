@@ -10,12 +10,18 @@ void Game::Init()
 {
 	SDL_InitSubSystem(SDL_INIT_VIDEO);
 
+	m_assetSystem.Init();
+	m_audioSystem.Init();
+	m_entitySystem.Init();
 	m_graphicsSystem.Init();
 	m_inputSystem.Init();
 }
 
 void Game::Frame()
 {
+	m_assetSystem.Update();
+	m_audioSystem.Update();
+	m_entitySystem.Update();
 	m_graphicsSystem.Update();
 	m_inputSystem.Update();
 
@@ -61,6 +67,9 @@ void Game::Frame()
 
 void Game::Shutdown()
 {
+	m_assetSystem.Shutdown();
+	m_audioSystem.Shutdown();
+	m_entitySystem.Shutdown();
 	m_graphicsSystem.Shutdown();
 	m_inputSystem.Shutdown();
 
