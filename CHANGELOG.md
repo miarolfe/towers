@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - SDL3 dependency
 - Game class
 - GraphicsSystem stub
+- InputSystem stub
+- SDL window
 
 ### Fixed
 - SDL3 link issue
