@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - InputSystem stub
 - SDL window
 - stb_image dependency
+- InputSystem implementation
 
 ### Fixed
 - SDL3 link issue

@@ -14,11 +14,14 @@ public:
 	void Update() override;
 	void Shutdown() override;
 
-	void OnKeyDown(SDL_Keycode key) override;
-	void OnKeyUp(SDL_Keycode key) override;
+	void OnKeyDown(SDL_Keycode keycode) override;
+	void OnKeyUp(SDL_Keycode keycode) override;
 	void OnMouseMotion(float x, float y, float xRel, float yRel) override;
 	void OnMouseButtonDown(uint8_t buttonIndex) override;
 	void OnMouseButtonUp(uint8_t buttonIndex) override;
+
+private:
+	InputStateKey SDLKeycodeToInputStateKey(SDL_Keycode key);
 
 protected:
 	InputState m_inputState;
