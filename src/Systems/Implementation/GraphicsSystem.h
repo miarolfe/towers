@@ -17,6 +17,6 @@ public:
 	void OnWindowResized(int32_t width, int32_t height) override;
 
 protected:
-	SDL_Window* m_window;
-	SDL_Renderer* m_renderer;
+	SDL_Window* m_window = nullptr;
+	SDL_Renderer* m_renderer = nullptr;
 };

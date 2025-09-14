@@ -43,6 +43,7 @@ enum class InputStateKey : uint8_t
 	X = 33u,
 	Y = 34u,
 	Z = 35u,
+	INVALID = 36u,
 	SIZE
 };
 

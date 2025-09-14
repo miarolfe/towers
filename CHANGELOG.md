@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - stb_image dependency
 - InputSystem implementation
 - SystemLocator
+- AssetSystem filepath location
 
 ### Fixed
 - SDL3 link issue

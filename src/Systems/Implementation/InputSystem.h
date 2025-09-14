@@ -23,7 +23,7 @@ public:
 
 	Vec2 GetMousePosition() override;
 
-private:
+protected:
 	InputStateKey SDLKeycodeToInputStateKey(SDL_Keycode key);
 
 protected:

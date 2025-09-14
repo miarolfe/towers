@@ -4,8 +4,6 @@
 #include <cassert>
 #include <SDL3/SDL.h>
 
-#include <iostream>
-
 InputSystem::InputSystem()
 {
 
@@ -173,7 +171,6 @@ InputStateKey InputSystem::SDLKeycodeToInputStateKey(SDL_Keycode key)
 		case SDLK_Z:
 			return InputStateKey::Z;
 		default:
-			assert(false);
-			return InputStateKey::SIZE;
+			return InputStateKey::INVALID;
 	}
 }
