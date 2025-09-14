@@ -3,7 +3,7 @@
 
 #include <Systems/Interface/AssetSystemInterface.h>
 
-class AssetSystem : AssetSystemInterface
+class AssetSystem : public AssetSystemInterface
 {
 public:
 	AssetSystem();

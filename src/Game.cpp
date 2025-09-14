@@ -1,6 +1,8 @@
 // Copyright Mia Rolfe. All rights reserved.
 #include <Game.h>
 
+#include <SystemLocator.h>
+
 Game::Game()
 {
 
@@ -15,6 +17,12 @@ void Game::Init()
 	m_entitySystem.Init();
 	m_graphicsSystem.Init();
 	m_inputSystem.Init();
+
+	SystemLocator::RegisterAssetSystem(&m_assetSystem);
+	SystemLocator::RegisterAudioSystem(&m_audioSystem);
+	SystemLocator::RegisterEntitySystem(&m_entitySystem);
+	SystemLocator::RegisterGraphicsSystem(&m_graphicsSystem);
+	SystemLocator::RegisterInputSystem(&m_inputSystem);
 }
 
 void Game::Frame()
@@ -72,6 +80,12 @@ void Game::Shutdown()
 	m_entitySystem.Shutdown();
 	m_graphicsSystem.Shutdown();
 	m_inputSystem.Shutdown();
+
+	SystemLocator::DeregisterAssetSystem();
+	SystemLocator::DeregisterAudioSystem();
+	SystemLocator::DeregisterEntitySystem();
+	SystemLocator::DeregisterGraphicsSystem();
+	SystemLocator::DeregisterInputSystem();
 
 	SDL_QuitSubSystem(SDL_INIT_VIDEO);
 	SDL_Quit();

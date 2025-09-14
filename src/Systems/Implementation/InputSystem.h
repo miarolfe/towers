@@ -5,8 +5,9 @@
 #include <SDL3/SDL.h>
 #include <Systems/Interface/InputSystemInterface.h>
 #include <InputState.h>
+#include <Vec.h>
 
-class InputSystem : InputSystemInterface
+class InputSystem : public InputSystemInterface
 {
 public:
 	InputSystem();
@@ -19,6 +20,8 @@ public:
 	void OnMouseMotion(float x, float y, float xRel, float yRel) override;
 	void OnMouseButtonDown(uint8_t buttonIndex) override;
 	void OnMouseButtonUp(uint8_t buttonIndex) override;
+
+	Vec2 GetMousePosition() override;
 
 private:
 	InputStateKey SDLKeycodeToInputStateKey(SDL_Keycode key);

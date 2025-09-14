@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - SDL window
 - stb_image dependency
 - InputSystem implementation
+- SystemLocator
 
 ### Fixed
 - SDL3 link issue

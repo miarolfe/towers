@@ -5,7 +5,7 @@
 #include <SDL3/SDL.h>
 #include <Systems/Interface/GraphicsSystemInterface.h>
 
-class GraphicsSystem : GraphicsSystemInterface
+class GraphicsSystem : public GraphicsSystemInterface
 {
 public:
 	GraphicsSystem();

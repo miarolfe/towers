@@ -3,7 +3,7 @@
 
 #include <Systems/Interface/AudioSystemInterface.h>
 
-class AudioSystem : AudioSystemInterface
+class AudioSystem : public AudioSystemInterface
 {
 public:
 	AudioSystem();

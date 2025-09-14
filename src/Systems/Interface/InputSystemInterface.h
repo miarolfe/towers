@@ -4,6 +4,7 @@
 #include <cstdint>
 #include <SDL3/SDL.h>
 #include <Systems/Interface/SystemInterface.h>
+#include <Vec.h>
 
 class InputSystemInterface : SystemInterface
 {
@@ -13,4 +14,6 @@ public:
 	virtual void OnMouseMotion(float x, float y, float xRel, float yRel) = 0;
 	virtual void OnMouseButtonDown(uint8_t buttonIndex) = 0;
 	virtual void OnMouseButtonUp(uint8_t buttonIndex) = 0;
+
+	virtual Vec2 GetMousePosition() = 0;
 };

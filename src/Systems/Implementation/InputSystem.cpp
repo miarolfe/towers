@@ -91,6 +91,11 @@ void InputSystem::OnMouseButtonUp(uint8_t buttonIndex)
 	}
 }
 
+Vec2 InputSystem::GetMousePosition()
+{
+	return m_inputState.mouse.position;
+}
+
 InputStateKey InputSystem::SDLKeycodeToInputStateKey(SDL_Keycode key)
 {
 	switch (key)

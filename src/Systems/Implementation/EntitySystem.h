@@ -4,7 +4,7 @@
 #include <Systems/Interface/EntitySystemInterface.h>
 #include <Entity.h>
 
-class EntitySystem : EntitySystemInterface
+class EntitySystem : public EntitySystemInterface
 {
 public:
 	EntitySystem();
