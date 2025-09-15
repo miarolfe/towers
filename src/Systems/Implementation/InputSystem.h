@@ -22,6 +22,7 @@ public:
 	void OnMouseButtonUp(uint8_t buttonIndex) override;
 
 	Vec2 GetMousePosition() override;
+	const InputState& GetInputState() override;
 
 protected:
 	InputStateKey SDLKeycodeToInputStateKey(SDL_Keycode key);

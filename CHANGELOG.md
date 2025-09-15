@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - InputSystem implementation
 - SystemLocator
 - AssetSystem filepath location
+- InputSystem InputState accessor
 
 ### Fixed
 - SDL3 link issue

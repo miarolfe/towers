@@ -94,6 +94,11 @@ Vec2 InputSystem::GetMousePosition()
 	return m_inputState.mouse.position;
 }
 
+const InputState& InputSystem::GetInputState()
+{
+	return m_inputState;
+}
+
 InputStateKey InputSystem::SDLKeycodeToInputStateKey(SDL_Keycode key)
 {
 	switch (key)
